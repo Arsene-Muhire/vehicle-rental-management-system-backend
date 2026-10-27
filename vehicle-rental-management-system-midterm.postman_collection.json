@@ -1,0 +1,1051 @@
+{
+    "variable":  [
+                     {
+                         "key":  "baseUrl",
+                         "value":  "http://localhost:8080"
+                     },
+                     {
+                         "key":  "vehicleClassId",
+                         "value":  "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                     },
+                     {
+                         "key":  "branchId",
+                         "value":  "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                     },
+                     {
+                         "key":  "rentalAgentId",
+                         "value":  "a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                     },
+                     {
+                         "key":  "graceId",
+                         "value":  "0d1655c2-bb86-4652-9d6c-54c1f82e2174"
+                     },
+                     {
+                         "key":  "renterId",
+                         "value":  "fa983a12-c6a0-4b17-9083-cdab1803f44d"
+                     },
+                     {
+                         "key":  "rentalId",
+                         "value":  "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                     },
+                     {
+                         "key":  "missingId",
+                         "value":  "00000000-0000-0000-0000-000000000000"
+                     },
+                     {
+                         "key":  "deleteId",
+                         "value":  "00000000-0000-0000-0000-000000000000"
+                     }
+                 ],
+    "info":  {
+                 "name":  "vehicle-rental-management-system-midterm",
+                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+             },
+    "item":  [
+                 {
+                     "name":  "A2",
+                     "item":  [
+                                  {
+                                      "name":  "A2 vehicle-classes save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Van\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/save",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "save"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/all",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "all"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/{{vehicleClassId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "{{vehicleClassId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Sedan\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/update/{{vehicleClassId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "update",
+                                                                               "{{vehicleClassId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Sedan\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/update/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "update",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/delete/{{deleteId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "delete",
+                                                                               "{{deleteId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/delete/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "delete",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Rubavu\",\r\n    \"branchNumber\":  5\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/save",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "save"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/all",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "all"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/{{branchId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "{{branchId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Kigali Downtown\",\r\n    \"branchNumber\":  1\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/update/{{branchId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "update",
+                                                                               "{{branchId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Kigali Downtown\",\r\n    \"branchNumber\":  1\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/update/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "update",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/delete/{{deleteId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "delete",
+                                                                               "{{deleteId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/branches/delete/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "delete",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-999001\",\r\n    \"firstName\":  \"Claude\",\r\n    \"phone\":  \"0788999001\",\r\n    \"lastName\":  \"Test\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/save",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "save"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/all",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "all"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/{{renterId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "{{renterId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-884521\",\r\n    \"firstName\":  \"Arsene\",\r\n    \"phone\":  \"0788000001\",\r\n    \"lastName\":  \"Muhire\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/update/{{renterId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "update",
+                                                                               "{{renterId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-884521\",\r\n    \"firstName\":  \"Arsene\",\r\n    \"phone\":  \"0788000001\",\r\n    \"lastName\":  \"Muhire\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/update/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "update",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/delete/{{deleteId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "delete",
+                                                                               "{{deleteId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 renters delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/renters/delete/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "renters",
+                                                                               "delete",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"email\":  \"paul.test@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"{{vehicleClassId}}\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"{{branchId}}\"\r\n               },\r\n    \"firstName\":  \"Paul\",\r\n    \"lastName\":  \"Test\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/save",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "save"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/all",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "all"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/{{rentalAgentId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "{{rentalAgentId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"{{vehicleClassId}}\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"{{branchId}}\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/update/{{rentalAgentId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "update",
+                                                                               "{{rentalAgentId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"{{vehicleClassId}}\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"{{branchId}}\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/update/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "update",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/delete/{{deleteId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "delete",
+                                                                               "{{deleteId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rental-agents delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rental-agents/delete/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rental-agents",
+                                                                               "delete",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"{{graceId}}\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"{{renterId}}\"\r\n               },\r\n    \"plateNumber\":  \"RAG111L\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-12-01\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/save",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "save"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/all",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "all"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/{{rentalId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "{{rentalId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"{{rentalAgentId}}\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"{{renterId}}\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/update/{{rentalId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "update",
+                                                                               "{{rentalId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"{{rentalAgentId}}\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"{{renterId}}\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/update/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "update",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/delete/{{deleteId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "delete",
+                                                                               "{{deleteId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 rentals delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "{{baseUrl}}"
+                                                                           ],
+                                                                  "raw":  "{{baseUrl}}/api/rentals/delete/{{missingId}}",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "rentals",
+                                                                               "delete",
+                                                                               "{{missingId}}"
+                                                                           ]
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  }
+                              ]
+                 }
+             ]
+}
