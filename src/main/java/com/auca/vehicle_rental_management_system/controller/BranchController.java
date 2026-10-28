@@ -35,6 +35,11 @@ public class BranchController {
         return ResponseEntity.ok(branchService.findAll());
     }
 
+    @GetMapping("/free")
+    public ResponseEntity<Object> findFree() {
+        return ResponseEntity.ok(branchService.findFree());
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable UUID id) {
         Optional<Branch> branch = branchService.findById(id);

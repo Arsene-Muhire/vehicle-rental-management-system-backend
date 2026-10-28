@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
@@ -33,6 +34,11 @@ public class RentalAgentController {
     @GetMapping("/all")
     public ResponseEntity<Object> findAll() {
         return ResponseEntity.ok(rentalAgentService.findAll());
+    }
+
+    @GetMapping("/by-vehicle-class")
+    public ResponseEntity<Object> findByVehicleClassName(@RequestParam String name) {
+        return ResponseEntity.ok(rentalAgentService.findByVehicleClassName(name));
     }
 
     @GetMapping("/{id}")

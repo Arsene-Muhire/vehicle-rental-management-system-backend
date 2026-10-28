@@ -755,7 +755,7 @@
                                       "name":  "A2 rental-agents update",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
+                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           },\r\n                           {\r\n                               \"id\":  \"f9030bb9-edd1-422f-a0ae-ea980c162ed5\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -790,7 +790,7 @@
                                       "name":  "A2 rental-agents update (404)",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
+                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           },\r\n                           {\r\n                               \"id\":  \"f9030bb9-edd1-422f-a0ae-ea980c162ed5\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -1195,6 +1195,124 @@
                                                               "localhost"
                                                           ],
                                                  "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "C1",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "by-vehicle-class"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/by-vehicle-class?name=suv",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "name",
+                                                                   "value":  "suv"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "C2",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "branches",
+                                                              "free"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/branches/free"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "C3",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "vehicle-classes",
+                                                              "unused"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/vehicle-classes/unused"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "C4",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "renters",
+                                                              "of-rental-agent",
+                                                              "a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/renters/of-rental-agent/a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "C4 (404 unknown rental agent)",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "renters",
+                                                              "of-rental-agent",
+                                                              "00000000-0000-0000-0000-000000000000"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/renters/of-rental-agent/00000000-0000-0000-0000-000000000000"
                                              },
                                      "header":  [
 

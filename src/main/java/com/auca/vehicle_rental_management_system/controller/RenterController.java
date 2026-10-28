@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -39,6 +40,16 @@ public class RenterController {
     @GetMapping("/by-last-name")
     public ResponseEntity<Object> findByLastName(@RequestParam String lastName) {
         return ResponseEntity.ok(renterService.findByLastName(lastName));
+    }
+
+    @GetMapping("/of-rental-agent/{rentalAgentId}")
+    public ResponseEntity<Object> findByRentalAgent(@PathVariable UUID rentalAgentId) {
+        Optional<List<Renter>> renters = renterService.findByRentalAgent(rentalAgentId);
+        if (renters.isPresent()) {
+            return ResponseEntity.ok(renters.get());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The rental agent with that id does not exist");
+        }
     }
 
     @GetMapping("/{id}")

@@ -28,6 +28,10 @@ public class RentalAgentService {
         return rentalAgentRepository.findById(id);
     }
 
+    public List<RentalAgent> findByVehicleClassName(String name) {
+        return rentalAgentRepository.searchByVehicleClassName(name);
+    }
+
     public String update(UUID id, RentalAgent rentalAgent) {
         Optional<RentalAgent> existing = rentalAgentRepository.findById(id);
         if (existing.isEmpty()) {

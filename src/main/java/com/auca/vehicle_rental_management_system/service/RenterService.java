@@ -1,6 +1,7 @@
 package com.auca.vehicle_rental_management_system.service;
 
 import com.auca.vehicle_rental_management_system.entity.Renter;
+import com.auca.vehicle_rental_management_system.repository.RentalAgentRepository;
 import com.auca.vehicle_rental_management_system.repository.RenterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,9 @@ public class RenterService {
 
     @Autowired
     private RenterRepository renterRepository;
+
+    @Autowired
+    private RentalAgentRepository rentalAgentRepository;
 
     public String save(Renter renter) {
         renterRepository.save(renter);
@@ -30,6 +34,13 @@ public class RenterService {
 
     public List<Renter> findByLastName(String lastName) {
         return renterRepository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
+
+    public Optional<List<Renter>> findByRentalAgent(UUID rentalAgentId) {
+        if (!rentalAgentRepository.existsById(rentalAgentId)) {
+            return Optional.empty();
+        }
+        return Optional.of(renterRepository.findRentersOfRentalAgent(rentalAgentId));
     }
 
     public String update(UUID id, Renter renter) {

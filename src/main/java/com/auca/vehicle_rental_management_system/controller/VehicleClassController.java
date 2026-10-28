@@ -35,6 +35,11 @@ public class VehicleClassController {
         return ResponseEntity.ok(vehicleClassService.findAll());
     }
 
+    @GetMapping("/unused")
+    public ResponseEntity<Object> findUnused() {
+        return ResponseEntity.ok(vehicleClassService.findUnused());
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable UUID id) {
         Optional<VehicleClass> vehicleClass = vehicleClassService.findById(id);

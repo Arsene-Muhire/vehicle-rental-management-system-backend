@@ -28,6 +28,10 @@ public class BranchService {
         return branchRepository.findById(id);
     }
 
+    public List<Branch> findFree() {
+        return branchRepository.findFreeBranches();
+    }
+
     public String update(UUID id, Branch branch) {
         Optional<Branch> existing = branchRepository.findById(id);
         if (existing.isEmpty()) {

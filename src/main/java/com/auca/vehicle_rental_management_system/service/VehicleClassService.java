@@ -28,6 +28,10 @@ public class VehicleClassService {
         return vehicleClassRepository.findById(id);
     }
 
+    public List<VehicleClass> findUnused() {
+        return vehicleClassRepository.findUnusedVehicleClasses();
+    }
+
     public String update(UUID id, VehicleClass vehicleClass) {
         Optional<VehicleClass> existing = vehicleClassRepository.findById(id);
         if (existing.isEmpty()) {
