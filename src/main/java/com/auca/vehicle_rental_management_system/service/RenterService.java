@@ -28,6 +28,10 @@ public class RenterService {
         return renterRepository.findById(id);
     }
 
+    public List<Renter> findByLastName(String lastName) {
+        return renterRepository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
+
     public String update(UUID id, Renter renter) {
         Optional<Renter> existing = renterRepository.findById(id);
         if (existing.isEmpty()) {

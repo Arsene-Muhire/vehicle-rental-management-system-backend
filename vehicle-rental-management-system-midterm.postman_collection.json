@@ -1,46 +1,4 @@
 {
-    "variable":  [
-                     {
-                         "key":  "baseUrl",
-                         "value":  "http://localhost:8080"
-                     },
-                     {
-                         "key":  "vehicleClassId",
-                         "value":  "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
-                     },
-                     {
-                         "key":  "branchId",
-                         "value":  "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
-                     },
-                     {
-                         "key":  "rentalAgentId",
-                         "value":  "a93e0af8-fc5b-4eca-9499-4dee474ec968"
-                     },
-                     {
-                         "key":  "graceId",
-                         "value":  "0d1655c2-bb86-4652-9d6c-54c1f82e2174"
-                     },
-                     {
-                         "key":  "renterId",
-                         "value":  "fa983a12-c6a0-4b17-9083-cdab1803f44d"
-                     },
-                     {
-                         "key":  "rentalId",
-                         "value":  "efcdee0f-4b11-4616-9bd6-71499d15336a"
-                     },
-                     {
-                         "key":  "missingId",
-                         "value":  "00000000-0000-0000-0000-000000000000"
-                     },
-                     {
-                         "key":  "deleteId",
-                         "value":  "00000000-0000-0000-0000-000000000000"
-                     }
-                 ],
-    "info":  {
-                 "name":  "vehicle-rental-management-system-midterm",
-                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-             },
     "item":  [
                  {
                      "name":  "A2",
@@ -60,14 +18,16 @@
                                                       "method":  "POST",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/save",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
                                                                                "save"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -83,14 +43,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/all",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
                                                                                "all"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/all"
                                                               },
                                                       "header":  [
 
@@ -103,14 +65,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/{{vehicleClassId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
-                                                                               "{{vehicleClassId}}"
-                                                                           ]
+                                                                               "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
                                                               },
                                                       "header":  [
 
@@ -123,14 +87,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -152,15 +118,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/update/{{vehicleClassId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
                                                                                "update",
-                                                                               "{{vehicleClassId}}"
-                                                                           ]
+                                                                               "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/update/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
                                                               },
                                                       "header":  [
                                                                      {
@@ -185,15 +153,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/update/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
                                                                                "update",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -209,15 +179,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/delete/{{deleteId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
                                                                                "delete",
-                                                                               "{{deleteId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -230,15 +202,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/vehicle-classes/delete/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "vehicle-classes",
                                                                                "delete",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -260,14 +234,16 @@
                                                       "method":  "POST",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/save",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
                                                                                "save"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -283,14 +259,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/all",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
                                                                                "all"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/all"
                                                               },
                                                       "header":  [
 
@@ -303,14 +281,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/{{branchId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
-                                                                               "{{branchId}}"
-                                                                           ]
+                                                                               "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/90db0a61-3a8a-4e52-8757-40f8e29e4e43"
                                                               },
                                                       "header":  [
 
@@ -323,14 +303,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -352,15 +334,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/update/{{branchId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
                                                                                "update",
-                                                                               "{{branchId}}"
-                                                                           ]
+                                                                               "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/update/90db0a61-3a8a-4e52-8757-40f8e29e4e43"
                                                               },
                                                       "header":  [
                                                                      {
@@ -385,15 +369,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/update/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
                                                                                "update",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -409,15 +395,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/delete/{{deleteId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
                                                                                "delete",
-                                                                               "{{deleteId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -430,15 +418,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/branches/delete/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "branches",
                                                                                "delete",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -460,14 +450,16 @@
                                                       "method":  "POST",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/save",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
                                                                                "save"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -483,14 +475,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/all",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
                                                                                "all"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/all"
                                                               },
                                                       "header":  [
 
@@ -503,14 +497,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/{{renterId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
-                                                                               "{{renterId}}"
-                                                                           ]
+                                                                               "fa983a12-c6a0-4b17-9083-cdab1803f44d"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/fa983a12-c6a0-4b17-9083-cdab1803f44d"
                                                               },
                                                       "header":  [
 
@@ -523,14 +519,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -552,15 +550,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/update/{{renterId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
                                                                                "update",
-                                                                               "{{renterId}}"
-                                                                           ]
+                                                                               "fa983a12-c6a0-4b17-9083-cdab1803f44d"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/update/fa983a12-c6a0-4b17-9083-cdab1803f44d"
                                                               },
                                                       "header":  [
                                                                      {
@@ -585,15 +585,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/update/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
                                                                                "update",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -609,15 +611,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/delete/{{deleteId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
                                                                                "delete",
-                                                                               "{{deleteId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -630,15 +634,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/renters/delete/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "renters",
                                                                                "delete",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/renters/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -649,7 +655,7 @@
                                       "name":  "A2 rental-agents save",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"email\":  \"paul.test@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"{{vehicleClassId}}\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"{{branchId}}\"\r\n               },\r\n    \"firstName\":  \"Paul\",\r\n    \"lastName\":  \"Test\"\r\n}",
+                                                                   "raw":  "{\r\n    \"email\":  \"paul.test@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Paul\",\r\n    \"lastName\":  \"Test\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -660,14 +666,16 @@
                                                       "method":  "POST",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/save",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
                                                                                "save"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -683,14 +691,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/all",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
                                                                                "all"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/all"
                                                               },
                                                       "header":  [
 
@@ -703,14 +713,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/{{rentalAgentId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
-                                                                               "{{rentalAgentId}}"
-                                                                           ]
+                                                                               "a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/a93e0af8-fc5b-4eca-9499-4dee474ec968"
                                                               },
                                                       "header":  [
 
@@ -723,14 +735,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -741,7 +755,7 @@
                                       "name":  "A2 rental-agents update",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"{{vehicleClassId}}\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"{{branchId}}\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
+                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -752,15 +766,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/update/{{rentalAgentId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
                                                                                "update",
-                                                                               "{{rentalAgentId}}"
-                                                                           ]
+                                                                               "a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/update/a93e0af8-fc5b-4eca-9499-4dee474ec968"
                                                               },
                                                       "header":  [
                                                                      {
@@ -774,7 +790,7 @@
                                       "name":  "A2 rental-agents update (404)",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"{{vehicleClassId}}\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"{{branchId}}\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
+                                                                   "raw":  "{\r\n    \"email\":  \"alice.uwase@carhire.rw\",\r\n    \"vehicleClasses\":  [\r\n                           {\r\n                               \"id\":  \"fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa\"\r\n                           }\r\n                       ],\r\n    \"branch\":  {\r\n                   \"id\":  \"90db0a61-3a8a-4e52-8757-40f8e29e4e43\"\r\n               },\r\n    \"firstName\":  \"Alice\",\r\n    \"lastName\":  \"Uwase\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -785,15 +801,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/update/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
                                                                                "update",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -809,15 +827,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/delete/{{deleteId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
                                                                                "delete",
-                                                                               "{{deleteId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -830,15 +850,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rental-agents/delete/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rental-agents",
                                                                                "delete",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -849,7 +871,7 @@
                                       "name":  "A2 rentals save",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"{{graceId}}\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"{{renterId}}\"\r\n               },\r\n    \"plateNumber\":  \"RAG111L\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-12-01\"\r\n}",
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"0d1655c2-bb86-4652-9d6c-54c1f82e2174\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAG111L\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-12-01\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -860,14 +882,16 @@
                                                       "method":  "POST",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/save",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
                                                                                "save"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -883,14 +907,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/all",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
                                                                                "all"
-                                                                           ]
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/all"
                                                               },
                                                       "header":  [
 
@@ -903,14 +929,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/{{rentalId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
-                                                                               "{{rentalId}}"
-                                                                           ]
+                                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                               },
                                                       "header":  [
 
@@ -923,14 +951,16 @@
                                                       "method":  "GET",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -941,7 +971,7 @@
                                       "name":  "A2 rentals update",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"{{rentalAgentId}}\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"{{renterId}}\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a93e0af8-fc5b-4eca-9499-4dee474ec968\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -952,15 +982,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/update/{{rentalId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
                                                                                "update",
-                                                                               "{{rentalId}}"
-                                                                           ]
+                                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/update/efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                               },
                                                       "header":  [
                                                                      {
@@ -974,7 +1006,7 @@
                                       "name":  "A2 rentals update (404)",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"{{rentalAgentId}}\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"{{renterId}}\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a93e0af8-fc5b-4eca-9499-4dee474ec968\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -985,15 +1017,17 @@
                                                       "method":  "PUT",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/update/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
                                                                                "update",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -1009,15 +1043,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/delete/{{deleteId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
                                                                                "delete",
-                                                                               "{{deleteId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -1030,15 +1066,17 @@
                                                       "method":  "DELETE",
                                                       "url":  {
                                                                   "host":  [
-                                                                               "{{baseUrl}}"
+                                                                               "localhost"
                                                                            ],
-                                                                  "raw":  "{{baseUrl}}/api/rentals/delete/{{missingId}}",
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
                                                                   "path":  [
                                                                                "api",
                                                                                "rentals",
                                                                                "delete",
-                                                                               "{{missingId}}"
-                                                                           ]
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/rentals/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -1046,6 +1084,126 @@
                                                   }
                                   }
                               ]
+                 },
+                 {
+                     "name":  "B1",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "renters",
+                                                              "by-last-name"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/renters/by-last-name?lastName=muhire",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "lastName",
+                                                                   "value":  "muhire"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "B2",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "by-status"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/by-status?status=RESERVED",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "status",
+                                                                   "value":  "RESERVED"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "B2 (400 invalid status)",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "by-status"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/by-status?status=WRONG",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "status",
+                                                                   "value":  "WRONG"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "B3",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "between"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/between?start=2026-10-01\u0026end=2026-10-31",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "start",
+                                                                   "value":  "2026-10-01"
+                                                               },
+                                                               {
+                                                                   "key":  "end",
+                                                                   "value":  "2026-10-31"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
                  }
-             ]
+             ],
+    "info":  {
+                 "name":  "vehicle-rental-management-system-midterm",
+                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+             }
 }

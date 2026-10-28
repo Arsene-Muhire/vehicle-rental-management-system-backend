@@ -1,6 +1,7 @@
 package com.auca.vehicle_rental_management_system.controller;
 
 import com.auca.vehicle_rental_management_system.entity.Rental;
+import com.auca.vehicle_rental_management_system.entity.RentalStatus;
 import com.auca.vehicle_rental_management_system.service.RentalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -33,6 +36,18 @@ public class RentalController {
     @GetMapping("/all")
     public ResponseEntity<Object> findAll() {
         return ResponseEntity.ok(rentalService.findAll());
+    }
+
+    @GetMapping("/by-status")
+    public ResponseEntity<Object> findByStatus(@RequestParam RentalStatus status) {
+        return ResponseEntity.ok(rentalService.findByStatus(status));
+    }
+
+    @GetMapping("/between")
+    public ResponseEntity<Object> findBetween(@RequestParam String start, @RequestParam String end) {
+        LocalDate startDate = LocalDate.parse(start);
+        LocalDate endDate = LocalDate.parse(end);
+        return ResponseEntity.ok(rentalService.findBetween(startDate, endDate));
     }
 
     @GetMapping("/{id}")

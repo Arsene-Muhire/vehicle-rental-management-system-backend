@@ -1,10 +1,12 @@
 package com.auca.vehicle_rental_management_system.service;
 
 import com.auca.vehicle_rental_management_system.entity.Rental;
+import com.auca.vehicle_rental_management_system.entity.RentalStatus;
 import com.auca.vehicle_rental_management_system.repository.RentalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -26,6 +28,14 @@ public class RentalService {
 
     public Optional<Rental> findById(UUID id) {
         return rentalRepository.findById(id);
+    }
+
+    public List<Rental> findByStatus(RentalStatus status) {
+        return rentalRepository.findByStatusOrderByPickupDateAsc(status);
+    }
+
+    public List<Rental> findBetween(LocalDate start, LocalDate end) {
+        return rentalRepository.findByPickupDateBetweenOrderByPickupDateAsc(start, end);
     }
 
     public String update(UUID id, Rental rental) {
