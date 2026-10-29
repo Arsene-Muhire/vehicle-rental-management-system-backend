@@ -3,6 +3,7 @@ package com.auca.vehicle_rental_management_system.service;
 import com.auca.vehicle_rental_management_system.entity.Rental;
 import com.auca.vehicle_rental_management_system.entity.RentalStatus;
 import com.auca.vehicle_rental_management_system.repository.RentalRepository;
+import com.auca.vehicle_rental_management_system.repository.ReturnChargeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,9 @@ public class RentalService {
 
     @Autowired
     private RentalRepository rentalRepository;
+
+    @Autowired
+    private ReturnChargeRepository returnChargeRepository;
 
     public String save(Rental rental) {
         if (rental.getPickupDate().isBefore(LocalDate.now())) {
@@ -85,6 +89,9 @@ public class RentalService {
         Optional<Rental> rental = rentalRepository.findById(id);
         if (rental.isEmpty()) {
             return "The rental with that id does not exist";
+        }
+        if (returnChargeRepository.existsByRental(rental.get())) {
+            return "That rental has return charges, delete them first";
         }
         rentalRepository.deleteById(id);
         return "Rental deleted successfully";

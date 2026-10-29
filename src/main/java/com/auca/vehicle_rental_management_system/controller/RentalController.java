@@ -94,6 +94,8 @@ public class RentalController {
         String message = rentalService.delete(id);
         if (message.equals("The rental with that id does not exist")) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
+        } else if (message.equals("That rental has return charges, delete them first")) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(message);
         } else {
             return ResponseEntity.ok(message);
         }

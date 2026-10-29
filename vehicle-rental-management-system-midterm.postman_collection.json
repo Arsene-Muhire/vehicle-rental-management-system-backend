@@ -1695,6 +1695,241 @@
 
                                                 ]
                                  }
+                 },
+                 {
+                     "name":  "E1",
+                     "request":  {
+                                     "body":  {
+                                                  "raw":  "{\r\n    \"amountRwf\":  20000,\r\n    \"chargeType\":  \"Fuel shortfall\",\r\n    \"notes\":  \"Returned with a quarter tank\"\r\n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "language":  "json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "method":  "POST",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "save"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/save?rentalId=efcdee0f-4b11-4616-9bd6-71499d15336a",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "rentalId",
+                                                                   "value":  "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E1 (400 rental not RETURNED)",
+                     "request":  {
+                                     "body":  {
+                                                  "raw":  "{\r\n    \"amountRwf\":  20000,\r\n    \"chargeType\":  \"Fuel shortfall\",\r\n    \"notes\":  \"Returned with a quarter tank\"\r\n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "language":  "json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "method":  "POST",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "save"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/save?rentalId=50011468-c90b-4940-94fc-240cfedb8c7c",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "rentalId",
+                                                                   "value":  "50011468-c90b-4940-94fc-240cfedb8c7c"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E1 (404 rental not found)",
+                     "request":  {
+                                     "body":  {
+                                                  "raw":  "{\r\n    \"amountRwf\":  20000,\r\n    \"chargeType\":  \"Fuel shortfall\",\r\n    \"notes\":  \"Returned with a quarter tank\"\r\n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "language":  "json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "method":  "POST",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "save"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/save?rentalId=00000000-0000-0000-0000-000000000000",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "rentalId",
+                                                                   "value":  "00000000-0000-0000-0000-000000000000"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E2",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "renter",
+                                                              "DL-RW-884521"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/renter/DL-RW-884521"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E2 (empty list)",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "renter",
+                                                              "DL-RW-884522"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/renter/DL-RW-884522"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E3",
+                     "request":  {
+                                     "method":  "DELETE",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "delete",
+                                                              "1de4d7ff-ab89-44a2-8f95-62801b92a9be"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/delete/1de4d7ff-ab89-44a2-8f95-62801b92a9be"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E3 (404 charge not found)",
+                     "request":  {
+                                     "method":  "DELETE",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "return-charges",
+                                                              "delete",
+                                                              "00000000-0000-0000-0000-000000000000"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/return-charges/delete/00000000-0000-0000-0000-000000000000"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "E3 (409 rental has return charges)",
+                     "request":  {
+                                     "method":  "DELETE",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "delete",
+                                                              "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/delete/efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
                  }
              ],
     "info":  {
