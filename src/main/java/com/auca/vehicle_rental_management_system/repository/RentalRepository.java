@@ -10,6 +10,8 @@ import java.util.UUID;
 
 public interface RentalRepository extends JpaRepository<Rental, UUID> {
 
+    boolean existsByRentalAgentIdAndPickupDateAndStatusNot(UUID rentalAgentId, LocalDate pickupDate, RentalStatus status);
+
     List<Rental> findByStatusOrderByPickupDateAsc(RentalStatus status);
 
     List<Rental> findByPickupDateBetweenOrderByPickupDateAsc(LocalDate start, LocalDate end);

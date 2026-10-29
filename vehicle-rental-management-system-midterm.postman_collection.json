@@ -1318,6 +1318,383 @@
 
                                                 ]
                                  }
+                 },
+                 {
+                     "name":  "D1",
+                     "request":  {
+                                     "body":  {
+                                                  "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a7158c25-1eca-4b1f-a621-f3a6a706bae6\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAH201M\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-12-15\"\r\n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "language":  "json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "method":  "POST",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "save"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/save"
+                                             },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D1 (400 date in the past)",
+                     "request":  {
+                                     "body":  {
+                                                  "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a7158c25-1eca-4b1f-a621-f3a6a706bae6\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAH202N\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-10-01\"\r\n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "language":  "json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "method":  "POST",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "save"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/save"
+                                             },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D1 (409 rental agent busy)",
+                     "request":  {
+                                     "body":  {
+                                                  "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"0d1655c2-bb86-4652-9d6c-54c1f82e2174\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAH203P\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-11-03\"\r\n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "language":  "json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "method":  "POST",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "save"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/save"
+                                             },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D2",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "470c11ab-148d-4fe7-a81d-466316d69c2f",
+                                                              "status"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/470c11ab-148d-4fe7-a81d-466316d69c2f/status?status=PICKED_UP",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "status",
+                                                                   "value":  "PICKED_UP"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D2 (400 RETURNED to RESERVED)",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "efcdee0f-4b11-4616-9bd6-71499d15336a",
+                                                              "status"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/efcdee0f-4b11-4616-9bd6-71499d15336a/status?status=RESERVED",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "status",
+                                                                   "value":  "RESERVED"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D2 (404 rental not found)",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "00000000-0000-0000-0000-000000000000",
+                                                              "status"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/00000000-0000-0000-0000-000000000000/status?status=PICKED_UP",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "status",
+                                                                   "value":  "PICKED_UP"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D3",
+                     "request":  {
+                                     "method":  "PUT",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "0d1655c2-bb86-4652-9d6c-54c1f82e2174",
+                                                              "vehicle-classes",
+                                                              "95c90d29-07c6-43a6-a18b-0799a807cb8e"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/0d1655c2-bb86-4652-9d6c-54c1f82e2174/vehicle-classes/95c90d29-07c6-43a6-a18b-0799a807cb8e"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D3 (409 already has it)",
+                     "request":  {
+                                     "method":  "PUT",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "0d1655c2-bb86-4652-9d6c-54c1f82e2174",
+                                                              "vehicle-classes",
+                                                              "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/0d1655c2-bb86-4652-9d6c-54c1f82e2174/vehicle-classes/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D3 (404 vehicle class not found)",
+                     "request":  {
+                                     "method":  "PUT",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "0d1655c2-bb86-4652-9d6c-54c1f82e2174",
+                                                              "vehicle-classes",
+                                                              "00000000-0000-0000-0000-000000000000"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/0d1655c2-bb86-4652-9d6c-54c1f82e2174/vehicle-classes/00000000-0000-0000-0000-000000000000"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D4",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "a7158c25-1eca-4b1f-a621-f3a6a706bae6",
+                                                              "branch"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/a7158c25-1eca-4b1f-a621-f3a6a706bae6/branch?branchNumber=4",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "branchNumber",
+                                                                   "value":  "4"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D4 (409 branch taken)",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "a7158c25-1eca-4b1f-a621-f3a6a706bae6",
+                                                              "branch"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/a7158c25-1eca-4b1f-a621-f3a6a706bae6/branch?branchNumber=1",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "branchNumber",
+                                                                   "value":  "1"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D4 (404 branch not found)",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "a7158c25-1eca-4b1f-a621-f3a6a706bae6",
+                                                              "branch"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/a7158c25-1eca-4b1f-a621-f3a6a706bae6/branch?branchNumber=99",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "branchNumber",
+                                                                   "value":  "99"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "D4 (put Jean back to branch 2)",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rental-agents",
+                                                              "a7158c25-1eca-4b1f-a621-f3a6a706bae6",
+                                                              "branch"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rental-agents/a7158c25-1eca-4b1f-a621-f3a6a706bae6/branch?branchNumber=2",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "branchNumber",
+                                                                   "value":  "2"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
                  }
              ],
     "info":  {

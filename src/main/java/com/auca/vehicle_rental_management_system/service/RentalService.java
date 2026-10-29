@@ -18,6 +18,13 @@ public class RentalService {
     private RentalRepository rentalRepository;
 
     public String save(Rental rental) {
+        if (rental.getPickupDate().isBefore(LocalDate.now())) {
+            return "Rental date cannot be in the past";
+        }
+        if (rentalRepository.existsByRentalAgentIdAndPickupDateAndStatusNot(rental.getRentalAgent().getId(), rental.getPickupDate(), RentalStatus.CANCELLED)) {
+            return "Rental agent already has a pickup on that date";
+        }
+        rental.setStatus(RentalStatus.RESERVED);
         rentalRepository.save(rental);
         return "Rental saved successfully";
     }
@@ -45,7 +52,6 @@ public class RentalService {
         }
         Rental current = existing.get();
         current.setPickupDate(rental.getPickupDate());
-        current.setStatus(rental.getStatus());
         current.setPlateNumber(rental.getPlateNumber());
         current.setDays(rental.getDays());
         current.setRenter(rental.getRenter());
@@ -54,8 +60,30 @@ public class RentalService {
         return "Rental updated successfully";
     }
 
+    public String updateStatus(UUID id, RentalStatus newStatus) {
+        Optional<Rental> existing = rentalRepository.findById(id);
+        if (existing.isEmpty()) {
+            return "The rental with that id does not exist";
+        }
+        Rental current = existing.get();
+        RentalStatus oldStatus = current.getStatus();
+        boolean allowed = false;
+        if (oldStatus == RentalStatus.RESERVED) {
+            allowed = newStatus == RentalStatus.PICKED_UP || newStatus == RentalStatus.CANCELLED;
+        } else if (oldStatus == RentalStatus.PICKED_UP) {
+            allowed = newStatus == RentalStatus.RETURNED || newStatus == RentalStatus.CANCELLED;
+        }
+        if (!allowed) {
+            return "Cannot change status from " + oldStatus + " to " + newStatus;
+        }
+        current.setStatus(newStatus);
+        rentalRepository.save(current);
+        return "Rental status updated successfully";
+    }
+
     public String delete(UUID id) {
-        if (!rentalRepository.existsById(id)) {
+        Optional<Rental> rental = rentalRepository.findById(id);
+        if (rental.isEmpty()) {
             return "The rental with that id does not exist";
         }
         rentalRepository.deleteById(id);
