@@ -52,6 +52,17 @@ public class RentalController {
         }
     }
 
+    @GetMapping("/stats/by-status")
+    public ResponseEntity<Object> countByStatus() {
+        return ResponseEntity.ok(rentalService.countByStatus());
+    }
+
+    @PatchMapping("/cancel-day")
+    public ResponseEntity<String> cancelDay(@RequestParam UUID rentalAgentId, @RequestParam String date) {
+        LocalDate day = LocalDate.parse(date);
+        return ResponseEntity.ok(rentalService.cancelDay(rentalAgentId, day));
+    }
+
     @GetMapping("/all")
     public ResponseEntity<Object> findAll() {
         return ResponseEntity.ok(rentalService.findAll());

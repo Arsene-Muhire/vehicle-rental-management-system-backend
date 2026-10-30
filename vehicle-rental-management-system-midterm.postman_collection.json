@@ -4,10 +4,10 @@
                      "name":  "A2",
                      "item":  [
                                   {
-                                      "name":  "A2 vehicle-classes save",
+                                      "name":  "A2 rentals save",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"name\":  \"Van\"\r\n}",
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"0d1655c2-bb86-4652-9d6c-54c1f82e2174\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAG111L\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-12-01\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -24,10 +24,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "save"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/save"
+                                                                  "raw":  "http://localhost:8080/api/rentals/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -38,7 +38,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes all",
+                                      "name":  "A2 rentals all",
                                       "request":  {
                                                       "method":  "GET",
                                                       "url":  {
@@ -49,10 +49,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "all"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/all"
+                                                                  "raw":  "http://localhost:8080/api/rentals/all"
                                                               },
                                                       "header":  [
 
@@ -60,7 +60,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes get by id",
+                                      "name":  "A2 rentals get by id",
                                       "request":  {
                                                       "method":  "GET",
                                                       "url":  {
@@ -71,10 +71,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
-                                                                               "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                               "rentals",
+                                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                  "raw":  "http://localhost:8080/api/rentals/efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                               },
                                                       "header":  [
 
@@ -82,7 +82,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes get by id (404)",
+                                      "name":  "A2 rentals get by id (404)",
                                       "request":  {
                                                       "method":  "GET",
                                                       "url":  {
@@ -93,10 +93,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "00000000-0000-0000-0000-000000000000"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/rentals/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -104,10 +104,10 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes update",
+                                      "name":  "A2 rentals update",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"name\":  \"Sedan\"\r\n}",
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a93e0af8-fc5b-4eca-9499-4dee474ec968\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -124,11 +124,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "update",
-                                                                               "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/update/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                  "raw":  "http://localhost:8080/api/rentals/update/efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                               },
                                                       "header":  [
                                                                      {
@@ -139,10 +139,10 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes update (404)",
+                                      "name":  "A2 rentals update (404)",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"name\":  \"Sedan\"\r\n}",
+                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a93e0af8-fc5b-4eca-9499-4dee474ec968\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -159,11 +159,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "update",
                                                                                "00000000-0000-0000-0000-000000000000"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/update/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/rentals/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -174,7 +174,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes delete",
+                                      "name":  "A2 rentals delete",
                                       "request":  {
                                                       "method":  "DELETE",
                                                       "url":  {
@@ -185,11 +185,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                               "fb051ff0-5468-43d3-91ee-4a996aca4e61"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/delete/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/rentals/delete/fb051ff0-5468-43d3-91ee-4a996aca4e61"
                                                               },
                                                       "header":  [
 
@@ -197,7 +197,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 vehicle-classes delete (404)",
+                                      "name":  "A2 rentals delete (404)",
                                       "request":  {
                                                       "method":  "DELETE",
                                                       "url":  {
@@ -208,443 +208,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "vehicle-classes",
+                                                                               "rentals",
                                                                                "delete",
                                                                                "00000000-0000-0000-0000-000000000000"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/delete/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches save",
-                                      "request":  {
-                                                      "body":  {
-                                                                   "raw":  "{\r\n    \"name\":  \"Rubavu\",\r\n    \"branchNumber\":  5\r\n}",
-                                                                   "options":  {
-                                                                                   "raw":  {
-                                                                                               "language":  "json"
-                                                                                           }
-                                                                               },
-                                                                   "mode":  "raw"
-                                                               },
-                                                      "method":  "POST",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "save"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/save"
-                                                              },
-                                                      "header":  [
-                                                                     {
-                                                                         "key":  "Content-Type",
-                                                                         "value":  "application/json"
-                                                                     }
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches all",
-                                      "request":  {
-                                                      "method":  "GET",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "all"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/all"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches get by id",
-                                      "request":  {
-                                                      "method":  "GET",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/90db0a61-3a8a-4e52-8757-40f8e29e4e43"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches get by id (404)",
-                                      "request":  {
-                                                      "method":  "GET",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches update",
-                                      "request":  {
-                                                      "body":  {
-                                                                   "raw":  "{\r\n    \"name\":  \"Kigali Downtown\",\r\n    \"branchNumber\":  1\r\n}",
-                                                                   "options":  {
-                                                                                   "raw":  {
-                                                                                               "language":  "json"
-                                                                                           }
-                                                                               },
-                                                                   "mode":  "raw"
-                                                               },
-                                                      "method":  "PUT",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "update",
-                                                                               "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/update/90db0a61-3a8a-4e52-8757-40f8e29e4e43"
-                                                              },
-                                                      "header":  [
-                                                                     {
-                                                                         "key":  "Content-Type",
-                                                                         "value":  "application/json"
-                                                                     }
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches update (404)",
-                                      "request":  {
-                                                      "body":  {
-                                                                   "raw":  "{\r\n    \"name\":  \"Kigali Downtown\",\r\n    \"branchNumber\":  1\r\n}",
-                                                                   "options":  {
-                                                                                   "raw":  {
-                                                                                               "language":  "json"
-                                                                                           }
-                                                                               },
-                                                                   "mode":  "raw"
-                                                               },
-                                                      "method":  "PUT",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "update",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/update/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-                                                                     {
-                                                                         "key":  "Content-Type",
-                                                                         "value":  "application/json"
-                                                                     }
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches delete",
-                                      "request":  {
-                                                      "method":  "DELETE",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/delete/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 branches delete (404)",
-                                      "request":  {
-                                                      "method":  "DELETE",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "branches",
-                                                                               "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/branches/delete/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters save",
-                                      "request":  {
-                                                      "body":  {
-                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-999001\",\r\n    \"firstName\":  \"Claude\",\r\n    \"phone\":  \"0788999001\",\r\n    \"lastName\":  \"Test\"\r\n}",
-                                                                   "options":  {
-                                                                                   "raw":  {
-                                                                                               "language":  "json"
-                                                                                           }
-                                                                               },
-                                                                   "mode":  "raw"
-                                                               },
-                                                      "method":  "POST",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "save"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/save"
-                                                              },
-                                                      "header":  [
-                                                                     {
-                                                                         "key":  "Content-Type",
-                                                                         "value":  "application/json"
-                                                                     }
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters all",
-                                      "request":  {
-                                                      "method":  "GET",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "all"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/all"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters get by id",
-                                      "request":  {
-                                                      "method":  "GET",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "fa983a12-c6a0-4b17-9083-cdab1803f44d"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/fa983a12-c6a0-4b17-9083-cdab1803f44d"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters get by id (404)",
-                                      "request":  {
-                                                      "method":  "GET",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters update",
-                                      "request":  {
-                                                      "body":  {
-                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-884521\",\r\n    \"firstName\":  \"Arsene\",\r\n    \"phone\":  \"0788000001\",\r\n    \"lastName\":  \"Muhire\"\r\n}",
-                                                                   "options":  {
-                                                                                   "raw":  {
-                                                                                               "language":  "json"
-                                                                                           }
-                                                                               },
-                                                                   "mode":  "raw"
-                                                               },
-                                                      "method":  "PUT",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "update",
-                                                                               "fa983a12-c6a0-4b17-9083-cdab1803f44d"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/update/fa983a12-c6a0-4b17-9083-cdab1803f44d"
-                                                              },
-                                                      "header":  [
-                                                                     {
-                                                                         "key":  "Content-Type",
-                                                                         "value":  "application/json"
-                                                                     }
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters update (404)",
-                                      "request":  {
-                                                      "body":  {
-                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-884521\",\r\n    \"firstName\":  \"Arsene\",\r\n    \"phone\":  \"0788000001\",\r\n    \"lastName\":  \"Muhire\"\r\n}",
-                                                                   "options":  {
-                                                                                   "raw":  {
-                                                                                               "language":  "json"
-                                                                                           }
-                                                                               },
-                                                                   "mode":  "raw"
-                                                               },
-                                                      "method":  "PUT",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "update",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/update/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-                                                                     {
-                                                                         "key":  "Content-Type",
-                                                                         "value":  "application/json"
-                                                                     }
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters delete",
-                                      "request":  {
-                                                      "method":  "DELETE",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/delete/00000000-0000-0000-0000-000000000000"
-                                                              },
-                                                      "header":  [
-
-                                                                 ]
-                                                  }
-                                  },
-                                  {
-                                      "name":  "A2 renters delete (404)",
-                                      "request":  {
-                                                      "method":  "DELETE",
-                                                      "url":  {
-                                                                  "host":  [
-                                                                               "localhost"
-                                                                           ],
-                                                                  "protocol":  "http",
-                                                                  "port":  "8080",
-                                                                  "path":  [
-                                                                               "api",
-                                                                               "renters",
-                                                                               "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
-                                                                           ],
-                                                                  "raw":  "http://localhost:8080/api/renters/delete/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/rentals/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -835,9 +403,9 @@
                                                                                "api",
                                                                                "rental-agents",
                                                                                "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                               "2c32666c-65a8-4a64-8156-8bfe0f2f6769"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rental-agents/delete/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/rental-agents/delete/2c32666c-65a8-4a64-8156-8bfe0f2f6769"
                                                               },
                                                       "header":  [
 
@@ -868,10 +436,10 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals save",
+                                      "name":  "A2 renters save",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"0d1655c2-bb86-4652-9d6c-54c1f82e2174\"\r\n                    },\r\n    \"days\":  2,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAG111L\",\r\n    \"status\":  \"RESERVED\",\r\n    \"pickupDate\":  \"2026-12-01\"\r\n}",
+                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-999001\",\r\n    \"firstName\":  \"Claude\",\r\n    \"phone\":  \"0788999001\",\r\n    \"lastName\":  \"Test\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -888,10 +456,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "save"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/save"
+                                                                  "raw":  "http://localhost:8080/api/renters/save"
                                                               },
                                                       "header":  [
                                                                      {
@@ -902,7 +470,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals all",
+                                      "name":  "A2 renters all",
                                       "request":  {
                                                       "method":  "GET",
                                                       "url":  {
@@ -913,10 +481,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "all"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/all"
+                                                                  "raw":  "http://localhost:8080/api/renters/all"
                                                               },
                                                       "header":  [
 
@@ -924,7 +492,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals get by id",
+                                      "name":  "A2 renters get by id",
                                       "request":  {
                                                       "method":  "GET",
                                                       "url":  {
@@ -935,10 +503,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
-                                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                                               "renters",
+                                                                               "fa983a12-c6a0-4b17-9083-cdab1803f44d"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                                  "raw":  "http://localhost:8080/api/renters/fa983a12-c6a0-4b17-9083-cdab1803f44d"
                                                               },
                                                       "header":  [
 
@@ -946,7 +514,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals get by id (404)",
+                                      "name":  "A2 renters get by id (404)",
                                       "request":  {
                                                       "method":  "GET",
                                                       "url":  {
@@ -957,10 +525,10 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "00000000-0000-0000-0000-000000000000"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/renters/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -968,10 +536,10 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals update",
+                                      "name":  "A2 renters update",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a93e0af8-fc5b-4eca-9499-4dee474ec968\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
+                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-884521\",\r\n    \"firstName\":  \"Arsene\",\r\n    \"phone\":  \"0788000001\",\r\n    \"lastName\":  \"Muhire\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -988,11 +556,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "update",
-                                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                                               "fa983a12-c6a0-4b17-9083-cdab1803f44d"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/update/efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                                                  "raw":  "http://localhost:8080/api/renters/update/fa983a12-c6a0-4b17-9083-cdab1803f44d"
                                                               },
                                                       "header":  [
                                                                      {
@@ -1003,10 +571,10 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals update (404)",
+                                      "name":  "A2 renters update (404)",
                                       "request":  {
                                                       "body":  {
-                                                                   "raw":  "{\r\n    \"rentalAgent\":  {\r\n                        \"id\":  \"a93e0af8-fc5b-4eca-9499-4dee474ec968\"\r\n                    },\r\n    \"days\":  3,\r\n    \"renter\":  {\r\n                   \"id\":  \"fa983a12-c6a0-4b17-9083-cdab1803f44d\"\r\n               },\r\n    \"plateNumber\":  \"RAB101A\",\r\n    \"status\":  \"RETURNED\",\r\n    \"pickupDate\":  \"2026-10-05\"\r\n}",
+                                                                   "raw":  "{\r\n    \"licenseNumber\":  \"DL-RW-884521\",\r\n    \"firstName\":  \"Arsene\",\r\n    \"phone\":  \"0788000001\",\r\n    \"lastName\":  \"Muhire\"\r\n}",
                                                                    "options":  {
                                                                                    "raw":  {
                                                                                                "language":  "json"
@@ -1023,11 +591,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "update",
                                                                                "00000000-0000-0000-0000-000000000000"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/update/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/renters/update/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
                                                                      {
@@ -1038,7 +606,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals delete",
+                                      "name":  "A2 renters delete",
                                       "request":  {
                                                       "method":  "DELETE",
                                                       "url":  {
@@ -1049,11 +617,11 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "delete",
-                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                               "89603578-af5f-46a6-9ddb-7f29e88038dc"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/delete/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/renters/delete/89603578-af5f-46a6-9ddb-7f29e88038dc"
                                                               },
                                                       "header":  [
 
@@ -1061,7 +629,7 @@
                                                   }
                                   },
                                   {
-                                      "name":  "A2 rentals delete (404)",
+                                      "name":  "A2 renters delete (404)",
                                       "request":  {
                                                       "method":  "DELETE",
                                                       "url":  {
@@ -1072,11 +640,443 @@
                                                                   "port":  "8080",
                                                                   "path":  [
                                                                                "api",
-                                                                               "rentals",
+                                                                               "renters",
                                                                                "delete",
                                                                                "00000000-0000-0000-0000-000000000000"
                                                                            ],
-                                                                  "raw":  "http://localhost:8080/api/rentals/delete/00000000-0000-0000-0000-000000000000"
+                                                                  "raw":  "http://localhost:8080/api/renters/delete/00000000-0000-0000-0000-000000000000"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Rubavu\",\r\n    \"branchNumber\":  5\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "save"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/save"
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "all"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/all"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/00000000-0000-0000-0000-000000000000"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Kigali Downtown\",\r\n    \"branchNumber\":  1\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "update",
+                                                                               "90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/update/90db0a61-3a8a-4e52-8757-40f8e29e4e43"
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Kigali Downtown\",\r\n    \"branchNumber\":  1\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "update",
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/update/00000000-0000-0000-0000-000000000000"
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "delete",
+                                                                               "76890211-8682-46ce-aac9-eb6872c3b2ba"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/delete/76890211-8682-46ce-aac9-eb6872c3b2ba"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 branches delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "branches",
+                                                                               "delete",
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/branches/delete/00000000-0000-0000-0000-000000000000"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes save",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Van\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "save"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/save"
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes all",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "all"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/all"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes get by id",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes get by id (404)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/00000000-0000-0000-0000-000000000000"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes update",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Sedan\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "update",
+                                                                               "fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/update/fdb66c70-9f40-46d6-a4b7-2fd8b70a80aa"
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes update (404)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\r\n    \"name\":  \"Sedan\"\r\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "update",
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/update/00000000-0000-0000-0000-000000000000"
+                                                              },
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes delete",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "delete",
+                                                                               "cb28922b-1d9b-4da1-ae1b-793df6b8dae6"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/delete/cb28922b-1d9b-4da1-ae1b-793df6b8dae6"
+                                                              },
+                                                      "header":  [
+
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "A2 vehicle-classes delete (404)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  {
+                                                                  "host":  [
+                                                                               "localhost"
+                                                                           ],
+                                                                  "protocol":  "http",
+                                                                  "port":  "8080",
+                                                                  "path":  [
+                                                                               "api",
+                                                                               "vehicle-classes",
+                                                                               "delete",
+                                                                               "00000000-0000-0000-0000-000000000000"
+                                                                           ],
+                                                                  "raw":  "http://localhost:8080/api/vehicle-classes/delete/00000000-0000-0000-0000-000000000000"
                                                               },
                                                       "header":  [
 
@@ -1925,6 +1925,93 @@
                                                               "efcdee0f-4b11-4616-9bd6-71499d15336a"
                                                           ],
                                                  "raw":  "http://localhost:8080/api/rentals/delete/efcdee0f-4b11-4616-9bd6-71499d15336a"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "F1",
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http",
+                                                 "port":  "8080",
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "stats",
+                                                              "by-status"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/stats/by-status"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "F2 (no rentals that day)",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "cancel-day"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/cancel-day?rentalAgentId=a93e0af8-fc5b-4eca-9499-4dee474ec968\u0026date=2030-01-01",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "rentalAgentId",
+                                                                   "value":  "a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                                                               },
+                                                               {
+                                                                   "key":  "date",
+                                                                   "value":  "2030-01-01"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 }
+                 },
+                 {
+                     "name":  "F2",
+                     "request":  {
+                                     "method":  "PATCH",
+                                     "url":  {
+                                                 "path":  [
+                                                              "api",
+                                                              "rentals",
+                                                              "cancel-day"
+                                                          ],
+                                                 "raw":  "http://localhost:8080/api/rentals/cancel-day?rentalAgentId=a93e0af8-fc5b-4eca-9499-4dee474ec968\u0026date=2026-10-20",
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "rentalAgentId",
+                                                                   "value":  "a93e0af8-fc5b-4eca-9499-4dee474ec968"
+                                                               },
+                                                               {
+                                                                   "key":  "date",
+                                                                   "value":  "2026-10-20"
+                                                               }
+                                                           ],
+                                                 "port":  "8080",
+                                                 "host":  [
+                                                              "localhost"
+                                                          ],
+                                                 "protocol":  "http"
                                              },
                                      "header":  [
 

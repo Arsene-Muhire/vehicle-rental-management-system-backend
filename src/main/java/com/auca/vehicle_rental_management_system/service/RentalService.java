@@ -6,6 +6,7 @@ import com.auca.vehicle_rental_management_system.repository.RentalRepository;
 import com.auca.vehicle_rental_management_system.repository.ReturnChargeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -47,6 +48,16 @@ public class RentalService {
 
     public List<Rental> findBetween(LocalDate start, LocalDate end) {
         return rentalRepository.findByPickupDateBetweenOrderByPickupDateAsc(start, end);
+    }
+
+    public List<Object[]> countByStatus() {
+        return rentalRepository.countByStatus();
+    }
+
+    @Transactional
+    public String cancelDay(UUID rentalAgentId, LocalDate date) {
+        int count = rentalRepository.cancelAgentDay(rentalAgentId, date, RentalStatus.CANCELLED, RentalStatus.RETURNED);
+        return count + " rentals cancelled";
     }
 
     public String update(UUID id, Rental rental) {
